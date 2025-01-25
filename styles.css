@@ -1,0 +1,183 @@
+@import url('https://fonts.google.com/specimen/Monoton');
+
+body {
+  font-family: 'Monoton', sans-serif;
+  background-color: #b9bac7;
+}
+
+/* waves */
+.ocean {
+  height: 150px;
+  /* change the height of the waves here */
+  width: 100%;
+  /* changed from 200% */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
+}
+
+.wave {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%23003F7C'/%3E%3C/svg%3E");
+  position: absolute;
+  width: 200%;
+  /* changed from 200% */
+  height: 100%;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(2) {
+  bottom: 0;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.5;
+}
+
+.wave:nth-of-type(3) {
+  bottom: 0;
+  animation: wave 20s -1s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-25%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.background {
+  position: button;
+  width: 100%;
+  /* changed from 1920px */
+  height: 100%;
+  /* changed from 1080px */
+  margin: 0 auto;
+}
+
+.notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000000;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.card {
+  margin-bottom: 20px;
+  background-color: #02236ac5;
+  color: rgb(109, 179, 236)
+}
+
+#alarmsList {
+  background-color: #800000;
+}
+
+
+#timeDisplay {
+  font-size: 5rem;
+}
+
+.fa-adjust {
+  animation: glowing 2s infinite;
+}
+
+.dark-mode .form-control {
+  background-color: #333;
+  color: rgb(90, 234, 155)
+}
+
+.dark-mode .list-group-item {
+  background-color: #333;
+  color: #fcfcfc;
+}
+
+.dark-mode {
+  background-color: #212529;
+  color: #0ff;
+}
+
+#darkModeBtn {
+  color: #ffffff;
+}
+
+.dark-mode h1,
+.dark-mode h5,
+.dark-mode .card-title,
+.dark-mode #alarmsList li {
+  color: #0ff;
+}
+
+/* Responsive styles */
+
+/* Small devices (up to 576px) */
+@media (max-width: 576px) {
+
+  #timeDisplay {
+    font-size: 3rem;
+  }
+
+  .col-md-4,
+  .col-md-8 {
+    width: 100%;
+  }
+
+  .card-body {
+    text-align: center;
+  }
+
+}
+
+/* Medium devices (between 577px and 992px) */
+@media (min-width: 577px) and (max-width: 992px) {
+  /* Adjust the styling for medium devices */
+
+
+  #timeDisplay {
+    font-size: 4rem;
+  }
+
+  .col-md-4,
+  .col-md-8 {
+    width: 50%;
+  }
+
+  .card-body {
+    text-align: center;
+  }
+
+}
+
+/* Large devices (above 992px) */
+@media (min-width: 993px) {
+  /* Adjust the styling for large devices */
+
+  #timeDisplay {
+    font-size: 5rem;
+  }
+
+
+  .col-md-4,
+  .col-md-8 {
+    width: auto;
+  }
+
+  .card-body {
+    text-align: left;
+  }
+
+}

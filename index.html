@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alarm_Clock</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+    <span class="navbar-brand mb-0 h1">Clock</span>
+    <button id="darkModeBtn" class="btn btn-dark"><div><i class="fa fa-adjust"></i></button></div>
+  </nav>
+   <div class="ocean">
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div><div class="ocean">
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Alarm Clock</h5>
+            <div class="form-group">
+              <label for="alarmHour">Hour:</label>
+              <input type="number" id="alarmHour" class="form-control" min="1" max="12">
+            </div>
+            <div class="form-group">
+              <label for="alarmMinute">Minute:</label>
+              <input type="number" id="alarmMinute" class="form-control" min="0" max="59">
+            </div>
+            <div class="form-group">
+              <label for="alarmSecond">Second:</label>
+              <input type="number" id="alarmSecond" class="form-control" min="0" max="59">
+            </div>
+            <div class="form-group">
+              <label for="alarmPeriod">AM/PM:</label>
+              <select id="alarmPeriod" class="form-control">
+                <option value="am">AM</option>
+                <option value="pm">PM</option>
+              </select>
+            </div>
+            <button id="setAlarmBtn" class="btn btn-primary">Set Alarm</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div id="clock" class="card">
+          <div class="card-body">
+            <h5 class="card-title">Clock</h5>
+            <h1 id="timeDisplay" class="display-4"></h1>
+            <div id="dateDisplay"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Alarms</h5>
+            <ul id="alarmsList" class="list-group">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
